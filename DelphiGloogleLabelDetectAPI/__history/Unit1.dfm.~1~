@@ -1,0 +1,44 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 231
+  ClientWidth = 505
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RESTClient1: TRESTClient
+    Params = <>
+    Left = 264
+    Top = 48
+  end
+  object RESTRequest1: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClient1
+    Method = rmPOST
+    Params = <
+      item
+        Name = 'key'
+        Value = 'AIzaSyBLSdcJ7BKTrM-0CSBHJ9u4yZCOXeSU1P0'
+      end
+      item
+        Kind = pkREQUESTBODY
+        Name = 'body'
+        Options = [poDoNotEncode]
+        ContentType = ctAPPLICATION_JSON
+      end>
+    Response = RESTResponse1
+    Left = 264
+    Top = 104
+  end
+  object RESTResponse1: TRESTResponse
+    Left = 264
+    Top = 160
+  end
+end
